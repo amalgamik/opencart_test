@@ -1,8 +1,19 @@
-- name: Copy single file to remote
+name: scp copy folder to remote via SSH
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+      LOCAL: test
+    steps:
+      - name: Copy single file to remote
         uses: garygrossgarten/github-action-scp@release
         with:
           local: index.html
-          remote: /home/stas/index.html
           host: 176.241.137.19
           port: 48912
           username: stas
