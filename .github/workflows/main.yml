@@ -1,0 +1,9 @@
+- name: Copy single file to remote
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: test/oof.txt
+          remote: scp/single/oof.txt
+          host: 176.241.137.19
+          port: 48912
+          username: stas
+          password: e2D0rado
