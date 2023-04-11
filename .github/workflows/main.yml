@@ -32,7 +32,7 @@ jobs:
       with:
         host: 3.67.36.139
         username: ubuntu
-        key: $AWS_1_PRIVATE_KEY
+        key: ${{ secrets.AWS_1_PRIVATE_KEY }}
         #password: e2D0rado
         port: 22
         source: "deploy.tar"
